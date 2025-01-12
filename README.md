@@ -1,7 +1,5 @@
 # CS 551 Project 3: Process Monitor
 
-Created by: Zackary Amo, Nupur More, Rohit Mhatre, Sairaj Raghuwanshi
-
 In this project, we implemented a system level function that displays the process data for the number of processes the programmer specifies. This function required the following steps to implement:
 
 1. Parsing process directories for the desired data and aggregating this data into an array of structures.
@@ -19,10 +17,6 @@ gcc -o demo demo.c proc_monitor.a
 ```
 
 ## Fetching Process Data Module
-
-**Author**: Zackary Amo
-**Role**: Fetching Process Data from the `/proc` File System
-**Files**: get_proc_data.c, demo.c
 
 
 ### Overview
@@ -47,11 +41,6 @@ Linux Programming Interface" textbook by Michael Kerrisk for an in depth explana
 
 
 ---------------------------------------------------------------------------------------------------
-
-## Process Metrics Module
-
-**Author**: Rohit Mhatre 
-**Role**: CPU and Memory Metrics Implementation  
 
 ## Overview
 This module provides functionality for monitoring CPU and memory usage of Linux processes by reading and analyzing data from the `/proc` filesystem. It calculates accurate CPU percentages accounting for system clock ticks and multi-core systems, as well as memory usage relative to total system memory.
@@ -86,12 +75,6 @@ This module provides functionality for monitoring CPU and memory usage of Linux 
 
 ---------------------------------------------------------------------------------------------------
 
-## Display Module 
-
-**Author**: Nupur More
-**Role**: Dispalying and coordinating the Process Monitor System
-**Files**: display.c and proc_monitor.c
-
 ## Overview
 The provided files, `display.c` and `proc_monitor.c`, work together to implement a process monitoring system that retrieves, processes, and displays system process information in real-time. Here's a breakdown of their functionalities:
 
@@ -122,11 +105,6 @@ Restores the terminal to its original state upon program exit, ensuring a clean 
 The main control file that manages the overall execution of the process monitor. This function take two parameters, `num_procs_display` and `interval`, which allows the programmer to specify the number of processes to display and the time interval for refereshing the display. It handles control-c signal interruptions (function: `sigint_handler`), retrieves process data (function: `get_proc_data`), initializes CPU usage tracking (function: `init_cpu_deltas`), and calls the display refresh function (`function: refresh_display`). It also manages resources and runs the monitoring loop with periodic updates.
 
 ---------------------------------------------------------------------------------------------------
-
-## Process Monitor Test
-
-**Author**: Sairaj Raghuwanshi
-**Role**: Process Monitor Testing Implementation  
 
 ## Overview
 To validate the functionality of the process monitor, a set of test cases was implemented in the `test_proc_monitor.c` program. These test cases verify different aspects of the process monitor system, ensuring accuracy and reliability in data retrieval, calculation, and display.
