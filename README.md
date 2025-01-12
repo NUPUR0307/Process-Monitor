@@ -1,6 +1,6 @@
 # CS 551 Project 3: Process Monitor
 
-In this project, we implemented a system level function that displays the process data for the number of processes the programmer specifies. This function required the following steps to implement:
+In this project, I implemented a system level function that displays the process data for the number of processes the programmer specifies. This function required the following steps to implement:
 
 1. Parsing process directories for the desired data and aggregating this data into an array of structures.
 
